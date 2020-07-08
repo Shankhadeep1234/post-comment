@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import faker from 'faker';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="ui container comments">
+      <h3 className="ui dividing header">Comments</h3>
+      <div class="comment">
+        <a href="/" className="avatar">
+          <img src={faker.image.avatar()} alt="avatar" />
         </a>
-      </header>
+        <div className="content">
+          <a href="/" className="author">
+            Matt
+          </a>
+          <div className="metadata">
+            <span className="date">Today at 5:42PM</span>
+          </div>
+          <div className="text">How artistic!</div>
+        </div>
+      </div>
     </div>
   );
 }
